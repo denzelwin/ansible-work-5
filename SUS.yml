@@ -1,0 +1,22 @@
+---
+- name: Install Http sever
+  hosts: firm2
+  become: yes
+  tasks:
+    - name: install HTTP
+      yum:
+      name: httpd
+      state: state
+      
+
+    - name: Start Http
+      service:
+        name: httpd
+        state: started
+
+    - name:  Enable
+      service:
+        name: httpd
+        enabled: enable
+
+   
