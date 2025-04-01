@@ -1,6 +1,7 @@
+
 ---
 - name: Install vim and create info.txt
-  hosts: all
+  hosts: firm1 
   become: yes
   tasks:
     - name: Ensure vim is installed
@@ -17,4 +18,3 @@
       copy:
         content: "Hello from Ansible!\n"
         dest: /opt/devops/info.txt
-
